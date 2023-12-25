@@ -21,7 +21,6 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <h1 className="h1-bold">This is Text!dddd!!!sss!!</h1>
         <body>{children}</body>
       </html>
     </ClerkProvider>
