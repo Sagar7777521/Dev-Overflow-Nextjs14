@@ -4,6 +4,18 @@ import "./globals.css";
 import { Inter, Space_Grotesk } from "next/font/google";
 import type { Metadata } from "next";
 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-spaceGrotesk",
+});
+
 export const metadata: Metadata = {
   title: "DevOverFlow",
   description:
@@ -21,7 +33,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>{children}</body>
+        <body className={"${intern.variable} {spaceGrotesk.variable}"}>
+          <h1 className="h1-bold">This is Textsssss</h1>
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
